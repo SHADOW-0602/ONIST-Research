@@ -1,0 +1,54 @@
+# ─── Web Framework ────────────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+python-multipart>=0.0.9
+
+# ─── Environment ──────────────────────────────────────────────────────────────
+python-dotenv>=1.0.1
+
+# ─── HTTP / Async ─────────────────────────────────────────────────────────────
+httpx>=0.27.0
+requests>=2.31.0
+aiohttp>=3.9.5
+crawl4ai>=0.3.0              # Async web scraper (Layer 0 — Footprint Agent)
+
+# ─── LangChain Core & Integrations ────────────────────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langgraph>=0.1.0
+
+# LLM Providers
+langchain-groq>=0.1.6                 # Layer 3  — Groq / Llama (Verification Gates)
+langchain-cohere>=0.1.9               # Layer 5  — Cohere (Bull/Bear Adversarial Debate)
+langchain-mistralai>=0.1.11           # Layer 5  — Mistral Large (FDD Synthesis)
+langchain-nvidia-ai-endpoints>=0.1.6  # Layer 2  — NVIDIA NIM / Llama 3.1 405B (Specialist Agents)
+
+# ─── LlamaIndex (RAG Layer 0) ─────────────────────────────────────────────────
+llama-index-core>=0.10.40
+llama-index-vector-stores-qdrant>=0.2.8
+llama-index-readers-file>=0.1.22
+llama-index-embeddings-fastembed>=0.1.4
+fastembed>=0.2.7
+
+# ─── Qdrant Vector Database ───────────────────────────────────────────────────
+qdrant-client>=1.9.1
+
+# 📂 Document Parsing (Local - High Speed)
+llama-index-readers-file>=0.1.0
+pymupdf>=1.24.2
+docx2txt>=0.8
+
+# ─── CockroachDB (PostgreSQL Database) ───────────────────────────────────────
+psycopg2-binary>=2.9.9
+
+# ─── Google GenAI SDK (Modern Backend) ───────────────────────────────────────
+google-genai>=0.1.0
+
+# ─── Google Generative AI SDK (Legacy - for compatibility if needed) ────────
+google-generativeai>=0.5.4
+
+
+
+# ─── Data Utilities ───────────────────────────────────────────────────────────
+python-dateutil>=2.9.0

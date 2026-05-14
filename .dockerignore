@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+.env
+
+# Git
+.git/
+.gitignore
+
+# Project specific
+downloads/
+scratch/
+test_nvda_results.txt
+*.md
+
+# IDEs
+.vscode/
+.idea/

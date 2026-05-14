@@ -1,0 +1,35 @@
+ONIST RESEARCH INTELLIGENCE PLATFORM — ARCHITECTURE MAP
+
+Layer 0: Data Ingestion
+- Polygon Client (polygon_client.py): Structured pricing and financial metadata.
+- Finviz Client (finviz_client.py): Screener metrics and snapshot scraping.
+- EDGAR Client (edgar_client.py): Automatic 10-K/10-Q filing downloads.
+- Web Scraper (scraper.py): Async Crawl4AI markdown extraction.
+- RAG Pipeline (rag_pipeline.py): LlamaIndex + Qdrant vectorization.
+
+Layer 1: Primary Research Agents (Gemini)
+- Identity Normalization Agent (identity.py)
+- Sector Classification Agent (sector.py)
+- Business Mechanics Agent (business_mechanics.py)
+- Business Segments Agent (business_segments.py)
+- Business Strategy Agent (business_strategy.py)
+- Management Compensation Agent (management_comp.py)
+- Management Biographies Agent (management_bios.py)
+
+Layer 2: Specialist Agents (NVIDIA NIM - Llama 3.1 405B)
+- Dossier Agent (dossier.py): Broader management team mapping.
+- Footprint Agent (footprint.py): Public persona and media analysis.
+
+Layer 3: Three-Gate Verification (Groq)
+- Gate 1: Hallucination Detector (hallucination_detector.py)
+- Gate 2: Source Auditor (source_auditor.py)
+- Gate 3: Staleness Reviewer (staleness_reviewer.py)
+
+Layer 4: Materiality Filter & Database
+- Notebook Client (notebook_client.py): PostgreSQL JSONB CRUD and semantic search.
+- Materiality Filter (materiality_filter.py): Filtering for final synthesis.
+
+Layer 5: Orchestration & Final Outputs
+- Master Orchestrator (orchestrator.py): LangGraph State Machine with HITL.
+- FDD Synthesizer (mistral_fdd.py): Mistral-based Final Report generation.
+- Adversarial Debate (cohere_debate.py): Cohere Bull/Bear adversarial framework.
